@@ -1,9 +1,4 @@
-getgenv().webhook = "https://discord.com/api/webhooks/1053009468096524308/R0MaLO0gMWakQOHsY8TIPW8_f3RdOYAp_v7MQr716a439cw1JSZ_68qC3H_PrFLqRPyG" -- webhook link for successful snipes
-getgenv().webhookFail = "https://discord.com/api/webhooks/1053009468096524308/R0MaLO0gMWakQOHsY8TIPW8_f3RdOYAp_v7MQr716a439cw1JSZ_68qC3H_PrFLqRPyG" -- webhook link for successful snipes
-getgenv().userid = "531416084956315649" -- pings your discord id if it snipes a huge or titanic 
-getgenv().alts = {"",""} -- put usernames to hop if more than two of them are in the same server
-getgenv().snipeNormalPets = false -- snipes other items that are priced at 1
-getgenv().normalwebhook = ""
+
 
 setfpscap(10)
 
