@@ -202,7 +202,7 @@ Booths_Broadcast.OnClientEvent:Connect(function(username, message)
             elseif item == "Crystal Key" and unitGems <= 10000 then
                 coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
                 return
-            elseif item == "Crystal Key Lower Half" and unitGems <= 5000 then
+            elseif item == "Crystal Key Lower Half" and unitGems <= 2500 then
                 coroutine.wrap(tryPurchase)(uid, gems, item, version, shiny, amount, username, class, playerid, buytimestamp, listTimestamp, snipeNormal)
                 return
             elseif item == "Crystal Key Upper Half" and unitGems <= 5000 then
@@ -316,7 +316,7 @@ local function jumpToServer()
     ts:TeleportToPlaceInstance(15502339080, servers[math.random(1, randomCount)], game:GetService("Players").LocalPlayer) 
 end
 
-if PlayerInServer < 25 then
+if PlayerInServer < 15 then
     while task.wait(1) do
 	jumpToServer()
     end
@@ -335,7 +335,7 @@ end
 Players.PlayerRemoving:Connect(function(player)
     getPlayers = Players:GetPlayers()
     PlayerInServer = #getPlayers
-    if PlayerInServer < 20 then
+    if PlayerInServer < 15 then
         while task.wait(1) do
 	    jumpToServer()
 	end
