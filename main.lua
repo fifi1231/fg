@@ -5,7 +5,6 @@ chocolog: providing type.huge
 Edmond: offered tips for optimization
 ]]--
 
-setfpscap(10)
 
 local osclock = os.clock()
 if not game:IsLoaded() then
@@ -16,7 +15,7 @@ task.wait(30) -- i hate library loading
 
 
 game.Players.LocalPlayer.PlayerScripts.Scripts.Core["Idle Tracking"].Enabled = false
-game:GetService("RunService"):Set3dRenderingEnabled(false)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fifi1231/fg/main/cpusave.lua"))()
 local Booths_Broadcast = game:GetService("ReplicatedStorage").Network:WaitForChild("Booths_Broadcast")
 local Players = game:GetService('Players')
 local getPlayers = Players:GetPlayers()
