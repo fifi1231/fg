@@ -19,6 +19,10 @@ getgenv().config = {
 wait(15)
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2a7ace7d651c472352ea0589cc6c570e.lua"))()
 
+_G.WebhookURL = "https://discord.com/api/webhooks/1202348766540341258/5WBqJvTm2leLsXfHszvyjaOUgd3frPIWIrM-NnSag5RW8CldAx-mIIcFBF3mWFjlGSO3" -- you webhook URL   
+_G.DiscUserID = "531416084956315649" -- your discord ID
+wait(20)
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/d68b8e56fab88bf7d726a7690f48b72b.lua"))()
 
 
 
