@@ -1,9 +1,8 @@
-
 getgenv().config = {
     placetoFish = "AdvancedFishing", -- place to fish "Fishing" or "AdvancedFishing"
     autoFishing = true, -- fish off execution or not
     autoPresents = false, -- collect presents
-    updateStats = false, -- update personal stats
+    updateStats = true, -- update personal stats
     invisWater = true, --invisible water :-)
     renderer = true,
     
@@ -17,6 +16,9 @@ getgenv().config = {
     mailTimer = 900, -- how often you want to send mail if you use automatic
     mailAuto = false, -- true/false
 }
-wait(15)
+
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2a7ace7d651c472352ea0589cc6c570e.lua"))()
-end
+
+
+
+
