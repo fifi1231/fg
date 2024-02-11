@@ -1,8 +1,4 @@
-local osclock = os.clock()
-if not game:IsLoaded() then
-    game.Loaded:Wait()
-end
-
+wait(15)
 getgenv().config = {
     placetoFish = "AdvancedFishing", -- place to fish "Fishing" or "AdvancedFishing"
     autoFishing = true, -- fish off execution or not
@@ -22,3 +18,4 @@ getgenv().config = {
     mailAuto = false, -- true/false
 }
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2a7ace7d651c472352ea0589cc6c570e.lua"))()
+end
