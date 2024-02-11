@@ -1,7 +1,7 @@
 getgenv().config = {
     placetoFish = "AdvancedFishing", -- place to fish "Fishing" or "AdvancedFishing"
     autoFishing = true, -- fish off execution or not
-    autoPresents = true, -- collect presents
+    autoPresents = false, -- collect presents
     updateStats = true, -- update personal stats
     invisWater = true, --invisible water :-)
     renderer = true,
