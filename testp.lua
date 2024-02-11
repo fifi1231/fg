@@ -1,3 +1,8 @@
+local osclock = os.clock()
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
+
 getgenv().config = {
     placetoFish = "AdvancedFishing", -- place to fish "Fishing" or "AdvancedFishing"
     autoFishing = true, -- fish off execution or not
