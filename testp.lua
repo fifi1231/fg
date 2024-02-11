@@ -16,7 +16,7 @@ getgenv().config = {
     mailTimer = 900, -- how often you want to send mail if you use automatic
     mailAuto = false, -- true/false
 }
-
+wait(15)
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2a7ace7d651c472352ea0589cc6c570e.lua"))()
 
 
