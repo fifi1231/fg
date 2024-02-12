@@ -15,25 +15,24 @@ local Debris    = Workspace:WaitForChild("__DEBRIS")
 local Network   = ReplicatedStorage:WaitForChild("Network")
 local OldHooks  = {}
 local FishingGame    = Player:WaitForChild("PlayerGui"):WaitForChild("_INSTANCES").FishingGame.GameBar
-local CurrentFishingModule = require(Things.__INSTANCE_CONTAINER.Active:WaitForChild("Fishing").ClientModule.FishingGame)
 
 --  functions
 
-for i,v in CurrentFishingModule do
+for i,v in Things.__INSTANCE_CONTAINER.Active:WaitForChild("Fishing").ClientModule.FishingGame do
     OldHooks[i] = v
 end
 
-CurrentFishingModule.IsFishInBar    = function()
+Things.__INSTANCE_CONTAINER.Active:WaitForChild("Fishing").ClientModule.FishingGame.IsFishInBar    = function()
     return math.random(1, 6) ~= 1
 end
 
-CurrentFishingModule.StartGame  = function(...) 
+Things.__INSTANCE_CONTAINER.Active:WaitForChild("Fishing").ClientModule.FishingGame.StartGame  = function(...) 
     InGame  = true
 
     return OldHooks.StartGame(...) 
 end
 
-CurrentFishingModule.StopGame   = function(...)
+Things.__INSTANCE_CONTAINER.Active:WaitForChild("Fishing").ClientModule.FishingGame.StopGame   = function(...)
     InGame  = false
 
     return OldHooks.StopGame(...)
