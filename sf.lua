@@ -15,7 +15,7 @@ local Debris    = Workspace:WaitForChild("__DEBRIS")
 local Network   = ReplicatedStorage:WaitForChild("Network")
 local OldHooks  = {}
 local FishingGame    = Player:WaitForChild("PlayerGui"):WaitForChild("_INSTANCES").FishingGame.GameBar
-local CurrentFishingModule = require(Things.__INSTANCE_CONTAINER.Active.Fishing.ClientModule.FishingGame)
+local CurrentFishingModule = Things.__INSTANCE_CONTAINER.Active.Fishing.ClientModule.FishingGame
 
 --  function
 
