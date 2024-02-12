@@ -15,24 +15,25 @@ local Debris    = Workspace:WaitForChild("__DEBRIS")
 local Network   = ReplicatedStorage:WaitForChild("Network")
 local OldHooks  = {}
 local FishingGame    = Player:WaitForChild("PlayerGui"):WaitForChild("_INSTANCES").FishingGame.GameBar
+local CurrentFishingModule = require(Things.__INSTANCE_CONTAINER.Active:WaitForChild("AdvancedFishing").ClientModule.FishingGame)
 
 --  functions
 
-for i,v in Things.__INSTANCE_CONTAINER.Active:WaitForChild("Fishing").ClientModule.FishingGame do
+for i,v in CurrentFishingModule do
     OldHooks[i] = v
 end
 
-Things.__INSTANCE_CONTAINER.Active:WaitForChild("Fishing").ClientModule.FishingGame.IsFishInBar    = function()
+CurrentFishingModule.IsFishInBar    = function()
     return math.random(1, 6) ~= 1
 end
 
-Things.__INSTANCE_CONTAINER.Active:WaitForChild("Fishing").ClientModule.FishingGame.StartGame  = function(...) 
+CurrentFishingModule.StartGame  = function(...) 
     InGame  = true
 
     return OldHooks.StartGame(...) 
 end
 
-Things.__INSTANCE_CONTAINER.Active:WaitForChild("Fishing").ClientModule.FishingGame.StopGame   = function(...)
+CurrentFishingModule.StopGame   = function(...)
     InGame  = false
 
     return OldHooks.StopGame(...)
@@ -59,17 +60,16 @@ local function getBubbles(anchor: BasePart)
             closestBobber   = distance
         end
     end
-
+end
     if myBobber then
         for _,v in Debris:GetChildren() do
-            if v.Name == "host" and v:FindFirstChild("Attachment") and (v.Attachment:FindFirstChild("Bubbles") or v.Attachment:FindFirstChild("Rare Bubbles")) and (v.CFrame.Position-myBobber.CFrame.Position).Magnitude <= 1 then
+            if v.Name == "host" and v:FindFirstChild("Attachment") and (v.Attachment:FindFirstChild("Bubbles")) or (v.Attachment:FindFirstChild("Rare Bubbles")) and (v.CFrame.Position-myBobber.CFrame.Position.Magnitude) <= 1 then
                 myBubbles   = true
-
                 break
             end
         end
     end
-
+end
     return myBubbles
 end
 
