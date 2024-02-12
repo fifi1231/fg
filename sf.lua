@@ -15,9 +15,9 @@ local Debris    = Workspace:WaitForChild("__DEBRIS")
 local Network   = ReplicatedStorage:WaitForChild("Network")
 local OldHooks  = {}
 local FishingGame    = Player:WaitForChild("PlayerGui"):WaitForChild("_INSTANCES").FishingGame.GameBar
-local CurrentFishingModule = Things.__INSTANCE_CONTAINER.Active.Fishing.ClientModule.FishingGame
+local CurrentFishingModule = require(Things.__INSTANCE_CONTAINER.Active:WaitForChild("Fishing").ClientModule.FishingGame)
 
---  function
+--  functions
 
 for i,v in CurrentFishingModule do
     OldHooks[i] = v
@@ -75,18 +75,20 @@ local function getBubbles(anchor: BasePart)
 end
 
 while task.wait(1) do
-    if Things.__INSTANCE_CONTAINER.Active:FindFirstChild("Fishing") and not InGame then
-        Network.Instancing_FireCustomFromClient:FireServer("Fishing", "RequestCast", Vector3.new(1158+math.random(-10, 10), 75, -3454+math.random(-10, 10)))
+    pcall(function()
+        if Things.__INSTANCE_CONTAINER.Active:FindFirstChild("Fishing") and not InGame then
+            Network.Instancing_FireCustomFromClient:FireServer("Fishing", "RequestCast", Vector3.new(1158+math.random(-10, 10), 75, -3454+math.random(-10, 10)))
 
-        local myAnchor  = getRod():WaitForChild("FishingLine").Attachment0
-        repeat RunService.RenderStepped:Wait() until not Active:FindFirstChild("Fishing") or myAnchor and getBubbles(myAnchor) or InGame
-        
-        if Active:FindFirstChild("Fishing") then
-            Network.Instancing_FireCustomFromClient:FireServer("Fishing", "RequestReel")
-            waitForGameState(true)
-            waitForGameState(false)
+            local myAnchor  = getRod():WaitForChild("FishingLine").Attachment0
+            repeat RunService.RenderStepped:Wait() until not Active:FindFirstChild("Fishing") or myAnchor and getBubbles(myAnchor) or InGame
+            
+            if Active:FindFirstChild("Fishing") then
+                Network.Instancing_FireCustomFromClient:FireServer("Fishing", "RequestReel")
+                waitForGameState(true)
+                waitForGameState(false)
+            end
+
+            repeat RunService.RenderStepped:Wait() until not Active:FindFirstChild("Fishing") or getRod() and getRod().Parent.Bobber.Transparency <= 0
         end
-
-        repeat RunService.RenderStepped:Wait() until not Active:FindFirstChild("Fishing") or getRod() and getRod().Parent.Bobber.Transparency <= 0
-    end
+    end)
 end
