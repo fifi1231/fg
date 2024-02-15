@@ -22,6 +22,9 @@ Part.Parent = workspace
 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1127, 70, -4049)
 
+game:GetService("RunService"):Set3dRenderingEnabled(false)
+
+setfpscap(10)
 
 _G.WebhookURL = "https://discord.com/api/webhooks/1202348766540341258/5WBqJvTm2leLsXfHszvyjaOUgd3frPIWIrM-NnSag5RW8CldAx-mIIcFBF3mWFjlGSO3"
 _G.DiscUserID = "531416084956315649"
