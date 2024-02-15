@@ -1,3 +1,5 @@
+game:GetService("Workspace")["__THINGS"].HiddenPresents.Highlight:Destroy()
+
 
 
 local vu = game:GetService("VirtualUser")
@@ -74,3 +76,18 @@ while task.wait() do
         until not hasFishingLine
         task.wait()
 end
+
+
+    while wait(0) and getgenv().present do
+       for i,v in pairs(game:GetService("Workspace")["__THINGS"].HiddenPresents:GetChildren()) do
+            v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        end 
+   local args = {
+    [1] = "df"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Hidden Presents: Found"):InvokeServer(unpack(args))
+end
+
+
+
