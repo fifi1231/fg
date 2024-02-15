@@ -1,4 +1,3 @@
-game:GetService("RunService"):Set3dRenderingEnabled(false)
 local RunService = game:GetService("RunService")
 UserSettings():GetService("UserGameSettings").MasterVolume = 0
 local decalsyeeted = true
