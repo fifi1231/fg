@@ -1,5 +1,4 @@
 
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-180.852783203125, 117.92350006103516, 5175.45703125)
 
 local vu = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
@@ -8,7 +7,21 @@ game:GetService("Players").LocalPlayer.Idled:connect(function()
    vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
 end)
 
-game:GetService("RunService"):Set3dRenderingEnabled(false)
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-180.852783203125, 117.92350006103516, 5175.45703125)
+
+wait(5)
+local Part = Instance.new("Part")
+Part.Anchored = true
+Part.BottomSurface = Enum.SurfaceType.Smooth
+Part.TopSurface = Enum.SurfaceType.Smooth
+Part.Size = Vector3.new(5, 1, 5)
+Part.CFrame = CFrame.new(1127, 64, -4049)
+Part.Parent = workspace
+
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1127, 70, -4049)
+
 
 _G.WebhookURL = "https://discord.com/api/webhooks/1202348766540341258/5WBqJvTm2leLsXfHszvyjaOUgd3frPIWIrM-NnSag5RW8CldAx-mIIcFBF3mWFjlGSO3"
 _G.DiscUserID = "531416084956315649"
@@ -20,7 +33,7 @@ while task.wait() do
         local argsCast = {
         [1] = "AdvancedFishing",
         [2] = "RequestCast",
-        [3] = Vector3.new(1470.6005859375, 61.6249885559082, -4448.0107421875)
+        [3] = Vector3.new(1127, 61.6249885559082, -4049)
         }
     
         game:GetService("ReplicatedStorage").Network.Instancing_FireCustomFromClient:FireServer(unpack(argsCast))
