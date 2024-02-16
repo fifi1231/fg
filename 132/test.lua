@@ -143,3 +143,44 @@
        }
         
         game:GetService("ReplicatedStorage").Network:FindFirstChild("Hidden Presents: Found"):InvokeServer(unpack(args))
+        local args = {
+            [1] = "ID_440.756714_28.290867_3860.128174"
+       }
+        
+        game:GetService("ReplicatedStorage").Network:FindFirstChild("Hidden Presents: Found"):InvokeServer(unpack(args))
+        local args = {
+            [1] = "ID_1052.026855_15.516001_2598.057373"
+        }
+
+        game:GetService("ReplicatedStorage").Network:FindFirstChild("Hidden Presents: Found"):InvokeServer(unpack(args))
+        local args = {
+            [1] = "ID_1183.363403_15.917000_1325.058960"
+        }
+
+        game:GetService("ReplicatedStorage").Network:FindFirstChild("Hidden Presents: Found"):InvokeServer(unpack(args))
+
+        local args = {
+            [1] = "ID_1267.267700_15.916683_2742.033691"
+        }
+
+        game:GetService("ReplicatedStorage").Network:FindFirstChild("Hidden Presents: Found"):InvokeServer(unpack(args))
+        local args = {
+            [1] = "ID_850.511780_16.176001_687.319580"
+        }
+
+        game:GetService("ReplicatedStorage").Network:FindFirstChild("Hidden Presents: Found"):InvokeServer(unpack(args))
+        local args = {
+            [1] = "ID_741.495667_17.202000_2736.655762"
+        }
+
+        game:GetService("ReplicatedStorage").Network:FindFirstChild("Hidden Presents: Found"):InvokeServer(unpack(args))
+        local args = {
+            [1] = "ID_1151.950684_15.917000_2903.622314"
+        }
+
+        game:GetService("ReplicatedStorage").Network:FindFirstChild("Hidden Presents: Found"):InvokeServer(unpack(args))
+        local args = {
+            [1] = "ID_-157.632751_117.225876_4986.939453"
+        }
+
+        game:GetService("ReplicatedStorage").Network:FindFirstChild("Hidden Presents: Found"):InvokeServer(unpack(args))
