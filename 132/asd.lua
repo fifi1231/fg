@@ -1,4 +1,4 @@
-game:GetService("Workspace")["__THINGS"].HiddenPresents.Highlight:Destroy()
+
 
 
 
@@ -28,10 +28,6 @@ game:GetService("RunService"):Set3dRenderingEnabled(false)
 
 setfpscap(10)
 
-_G.WebhookURL = "https://discord.com/api/webhooks/1202348766540341258/5WBqJvTm2leLsXfHszvyjaOUgd3frPIWIrM-NnSag5RW8CldAx-mIIcFBF3mWFjlGSO3"
-_G.DiscUserID = "531416084956315649"
-wait(10)
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/6672724acd01b8aff52f4dd6c276a425.lua"))()
 
 
 while task.wait() do  
@@ -75,18 +71,6 @@ while task.wait() do
         )
         until not hasFishingLine
         task.wait()
-end
-
-
-    while wait(0) and getgenv().present do
-       for i,v in pairs(game:GetService("Workspace")["__THINGS"].HiddenPresents:GetChildren()) do
-            v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-        end 
-   local args = {
-    [1] = "df"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Hidden Presents: Found"):InvokeServer(unpack(args))
 end
 
 
