@@ -11,6 +11,15 @@ if not game:IsLoaded() then
     game.Loaded:Wait()
 end
 
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+
+print("anty afk on")
+
 task.wait(30) -- i hate library loading
 
 game:GetService("RunService"):Set3dRenderingEnabled(false)
@@ -29,13 +38,6 @@ local Library = require(rs:WaitForChild("Library"))
 if not snipeNormalPets then
     snipeNormalPets = false
 end
-
-local vu = game:GetService("VirtualUser")
-Players.LocalPlayer.Idled:connect(function()
-   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-   task.wait(1)
-   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-end)
 
 local function processListingInfo(uid, gems, item, version, shiny, amount, boughtFrom, boughtStatus, class, failMessage, snipeNormal)
     local gemamount = Players.LocalPlayer.leaderstats["💎 Diamonds"].Value
