@@ -5,14 +5,6 @@ chocolog: providing type.huge
 Edmond: offered tips for optimization
 ]]--
 
-
-local osclock = os.clock()
-if not game:IsLoaded() then
-    game.Loaded:Wait()
-end
-
-task.wait(30) -- i hate library loading
-
 game:GetService("RunService"):Set3dRenderingEnabled(false)
 game.Players.LocalPlayer.PlayerScripts.Scripts.Core["Idle Tracking"].Enabled = false
 local Booths_Broadcast = game:GetService("ReplicatedStorage").Network:WaitForChild("Booths_Broadcast")
