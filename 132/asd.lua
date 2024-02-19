@@ -28,6 +28,12 @@ game:GetService("RunService"):Set3dRenderingEnabled(false)
 
 setfpscap(10)
 
+_G.WebhookURL = "https://discord.com/api/webhooks/1202348766540341258/5WBqJvTm2leLsXfHszvyjaOUgd3frPIWIrM-NnSag5RW8CldAx-mIIcFBF3mWFjlGSO3"
+_G.DiscUserID = "531416084956315649"
+
+wait(60)
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/6672724acd01b8aff52f4dd6c276a425.lua"))()
+
 while task.wait() do  
         local argsCast = {
         [1] = "AdvancedFishing",
