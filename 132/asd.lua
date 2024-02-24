@@ -1,6 +1,3 @@
-game:GetService("Workspace")["__THINGS"].HiddenPresents.Highlight:Destroy()
-
-
 
 local vu = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
@@ -78,8 +75,21 @@ while task.wait() do
 end
 
 
-    while wait(0) and getgenv().present do
+while wait(0) and getgenv().present do
 loadstring(game:HttpGet("https://raw.githubusercontent.com/fifi1231/fg/main/132/test.lua"))()
 end
 
 
+while wait(0) and getgenv().secu do
+    plrs = game:GetService("Players")
+plrs.PlayerAdded:Connect(function(player)
+    if player:IsInGroup(5060810) then
+        hop()
+    end
+end)
+
+local function hop()
+    local TeleportService = game:GetService("TeleportService")
+    TeleportService:Teleport(8737899170)
+end  
+end
