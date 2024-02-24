@@ -92,9 +92,3 @@ local function hop()
     TeleportService:Teleport(8737899170)
 end  
 end
-
-
-while wait(delay) and getgenv().hops do
-    local TeleportService = game:GetService("TeleportService")
-    TeleportService:Teleport(8737899170)
-end
