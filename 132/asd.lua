@@ -1,4 +1,3 @@
-
 local vu = game:GetService("VirtualUser")
 game:GetService("Players").LocalPlayer.Idled:connect(function()
    vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
@@ -92,4 +91,10 @@ local function hop()
     local TeleportService = game:GetService("TeleportService")
     TeleportService:Teleport(8737899170)
 end  
+end
+
+
+while wait(delay) and getgenv().hops do
+    local TeleportService = game:GetService("TeleportService")
+    TeleportService:Teleport(8737899170)
 end
