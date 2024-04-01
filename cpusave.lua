@@ -1,27 +1,4 @@
-if game:IsLoaded() then
-	pcall(function()
-		for _, v in pairs(game:GetService("Workspace"):FindFirstChild("__THINGS"):GetChildren()) do
-			if table.find({"ShinyRelics", "Ornaments", "Instances", "Ski Chairs"}, v.Name) then
-				v:Destroy()
-			end
-		end
 
-		for _, v in pairs(game:GetService("Workspace"):FindFirstChild("__THINGS").__INSTANCE_CONTAINER.Active.AdvancedFishing:GetChildren()) do
-			if string.find(v.Name, "Model") or string.find(v.Name, "Water") or string.find(v.Name, "Debris") or string.find(v.Name, "Interactable") then
-				v:Destroy()
-			end
-
-			if v.Name == "Map" then
-				for _, v in pairs(v:GetChildren()) do
-					if v.Name ~= "Union" then
-						v:Destroy()
-					end
-				end
-			end
-		end
-
-		game:GetService("Workspace"):WaitForChild("ALWAYS_RENDERING"):Destroy()
-	end)
 
 	local Workspace = game:GetService("Workspace")
 	local Terrain = Workspace:WaitForChild("Terrain")
@@ -116,5 +93,4 @@ if game:IsLoaded() then
 			v.Enabled = false
 		end
 	end
-	setfpscap(8)
-end
+	setfpscap(30)
