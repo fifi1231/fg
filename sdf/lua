@@ -5,6 +5,7 @@ getgenv().ConfigTable = {
     },
     ["Optimizations"] = {
         ["Mega_Optimizer"] = true,
+	["hideplayer"], = true,
     },
 }
 
@@ -111,9 +112,16 @@ task.spawn(function()
 
     local Optimized = false
     if Config.Optimizations.Mega_Optimizer and not Optimized then
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/fifi1231/fg/main/cpusave.lua'))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/fifi1231/fg/main/sdf/opty.lua'))()
         Optimized = true
     end
+
+    local Optimized = false
+    if Config.Optimizations.hideplayer and not Optimized then
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/fifi1231/fg/main/sdf/hideplayer.lua'))()
+        Optimized = true
+    end
+	
     if not Gui and Config.Fishing["Stats UI"] then
         Gui = Instance.new("ScreenGui")
         Gui.Parent = game.Players.LocalPlayer.PlayerGui
@@ -204,3 +212,5 @@ task.spawn(function()
         end
     end)
 end)
+
+
