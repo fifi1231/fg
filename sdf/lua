@@ -5,7 +5,7 @@ getgenv().ConfigTable = {
     },
     ["Optimizations"] = {
         ["Mega_Optimizer"] = true,
-	["hideplayer"], = true,
+	["hideplayer"] = true,
     },
 }
 
