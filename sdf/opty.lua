@@ -9,6 +9,8 @@ local advancedFishing = game:GetService("Workspace"):FindFirstChild("__THINGS").
 advancedFishing.Debris:ClearAllChildren()
 advancedFishing.Model:Destroy()
 
+game:GetService("RunService"):Set3dRenderingEnabled(false)
+
 pcall(function()
     local Lighting = game:GetService("Lighting")
     local Terrain = workspace:FindFirstChildOfClass('Terrain')
@@ -128,8 +130,3 @@ for _, v in pairs(game:GetDescendants()) do
     end
 end
 
-for i,v in pairs(game.Players.LocalPlayer.PlayerGui:GetChildren()) do
-    if v:IsA("ScreenGui") then
-        v.Enabled = false
-    end
-end
