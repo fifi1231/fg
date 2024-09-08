@@ -1,7 +1,26 @@
-getgenv().autoFishing = true
-getgenv().autoFishingConfig = {
-    OPTIMIZE_GAME = true,
-    HIDE_PLAYER = true
-}
+getgenv().KiTTYWARE_ColorWar = {
+    Farm_Zones = true,
+    Farming_Misc = {
+        Pets_Per_Breakable = 2,
+        Auto_Pickups = true,
+        Inf_Pet_Speed = true,
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/fdvll/pet-simulator-99/main/optimized-auto-fish.lua"))()
+        Event_Specific = {
+            Color_Gifts = {Enabled = true, Minimum_Buckets = 1},
+            Clan_Points = {Enabled = false, Minimum_Buckets = 50},
+            Stay_Teams = {Enabled = false, Only_Winning = false},
+        },
+    },
+    Hatch_Eggs = true,
+    Hatching_Misc = {
+        discord_UserID = "",
+        hugeNotif_Webhook = "Enter your Webhook Url.",
+        hugeNotif_Enabled = false,
+        autoMail_User = "Enter your Username.",
+        autoMail_Enabled = false,
+    },
+    StatsGui = true,
+    Fps_Boost1 = true, -- world stuff invisible
+    Fps_Boost2 = true, -- disable localscript 
+}
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/38e4778402a1d51414b40ab60274c5ed.lua"))()
