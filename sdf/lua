@@ -15,8 +15,7 @@ repeat task.wait() until not game.Players.LocalPlayer.PlayerGui:FindFirstChild("
 local Config = getgenv().ConfigTable
 
 if game.PlaceId ~= 8737899170 then repeat game.ReplicatedStorage.Network.World1Teleport:InvokeServer() task.wait(10) until not game.Players.LocalPlayer end
-game.Players.LocalPlayer.PlayerScripts.Scripts.Core["Idle Tracking"].Enabled = false
-game.Players.LocalPlayer.Idled:connect(function() game:GetService("VirtualUser"):Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame) task.wait(1) game:GetService("VirtualUser"):Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame) end)
+--[[ ANTIAFK ]] game.Players.LocalPlayer.PlayerScripts.Scripts.Core["Idle Tracking"].Enabled = false; game.Players.LocalPlayer.Idled:connect(function() game:GetService("VirtualUser"):Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame) task.wait(1) game:GetService("VirtualUser"):Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame) end)
 
 
 
