@@ -124,7 +124,7 @@ task.spawn(function()
 
     local Optimized = false
     if Config.Optimizations.Mega_Optimizer and not Optimized then
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/fifi1231/fg/main/cpusave.lua'))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/fifi1231/fg/main/sdf/opty.lua'))()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/fifi1231/fg/main/sdf/hideplayer.lua'))()
         Optimized = true
     end
