@@ -1,4 +1,4 @@
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/fifi1231/fg/main/sdf/opty.lua'))()
+
 getgenv().Fishing = {
     Instance = "AdvancedFishing", -- Fishing or AdvancedFishing
 
