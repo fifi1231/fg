@@ -1,3 +1,6 @@
+loadstring(game:HttpGet('https://raw.githubusercontent.com/fifi1231/fg/main/sdf/anyafk.lua'))()
+
+
 getgenv().ConfigTable = {
     ["Fishing"] = {
         ["Buy Rods"] = true,
@@ -14,11 +17,9 @@ repeat task.wait() until game:GetService("Players").LocalPlayer
 repeat task.wait() until not game.Players.LocalPlayer.PlayerGui:FindFirstChild("__INTRO")
 local Config = getgenv().ConfigTable
 
-if game.PlaceId ~= 8737899170 then repeat game.ReplicatedStorage.Network.World1Teleport:InvokeServer() task.wait(10) until not game.Players.LocalPlayer end
 
 local LocalPlayer = game.Players.LocalPlayer
 local HRP = LocalPlayer.Character.HumanoidRootPart
-local HttpService = game:GetService("HttpService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Network = ReplicatedStorage:WaitForChild("Network")
 local Active = workspace.__THINGS.__INSTANCE_CONTAINER.Active
@@ -209,5 +210,3 @@ task.spawn(function()
         end
     end)
 end)
-
-loadstring(game:HttpGet('https://raw.githubusercontent.com/fifi1231/fg/main/sdf/anyafk.lua'))()
