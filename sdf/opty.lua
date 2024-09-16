@@ -103,12 +103,7 @@ for _, entity in ipairs(entities) do
 end
 
 workspace.Gravity = 0
-local Player = game.Players.LocalPlayer
-for i, v in Player.PlayerScripts:GetChildren() do
-    pcall(function()
-        v:Destroy()
-    end)
-end
+
 for i, v in workspace:GetChildren() do
     if not (v.Name == "__THINGS" or v.Name == Player.Name)  then
         pcall(function()
