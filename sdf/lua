@@ -8,6 +8,11 @@ getgenv().ConfigTable = {
     },
 }
 
+repeat task.wait() until game:IsLoaded() 
+repeat task.wait() until game:GetService("Players").LocalPlayer
+repeat task.wait() until not game.Players.LocalPlayer.PlayerGui:FindFirstChild("__INTRO")
+local Config = getgenv().ConfigTable
+
 game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.Core["Idle Tracking"].Enabled = false
 if getconnections then
     for _, v in pairs(getconnections(game.Players.LocalPlayer.Idled)) do
@@ -21,8 +26,11 @@ else
     end)
 end
 
+if game.PlaceId ~= 8737899170 then repeat game.ReplicatedStorage.Network.World1Teleport:InvokeServer() task.wait(10) until not game.Players.LocalPlayer end
+
 local LocalPlayer = game.Players.LocalPlayer
 local HRP = LocalPlayer.Character.HumanoidRootPart
+local HttpService = game:GetService("HttpService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Network = ReplicatedStorage:WaitForChild("Network")
 local Active = workspace.__THINGS.__INSTANCE_CONTAINER.Active
