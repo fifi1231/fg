@@ -26,8 +26,6 @@ else
     end)
 end
 
-if game.PlaceId ~= 8737899170 then repeat game.ReplicatedStorage.Network.World1Teleport:InvokeServer() task.wait(10) until not game.Players.LocalPlayer end
-
 local LocalPlayer = game.Players.LocalPlayer
 local HRP = LocalPlayer.Character.HumanoidRootPart
 local HttpService = game:GetService("HttpService")
