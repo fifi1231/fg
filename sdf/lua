@@ -10,3 +10,4 @@ else
         game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
     end)
 end
+game:GetService("RunService"):Set3dRenderingEnabled(false)
