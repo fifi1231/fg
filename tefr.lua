@@ -1,5 +1,5 @@
 getgenv().CFG = {
-    ['Debuggers'] = { ['KeepCoreGUI'] = false }, -- dont need to mess with
+    ['Debuggers'] = { ['KeepCoreGUI'] = true }, -- dont need to mess with
     ['Stuff'] = { ['Stat Gui'] = true, ['Optimizer'] = true, ['Daycare'] = true }
 }
 getgenv().HIPPO_KEY = ""
