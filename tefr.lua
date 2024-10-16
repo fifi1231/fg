@@ -1,14 +1,12 @@
 getgenv().CFG = {
-    ['Debuggers'] = { ['KeepCoreGUI'] = true }, -- dont need to mess with
     ['Stuff'] = { ['Stat Gui'] = true, ['Optimizer'] = true, ['Daycare'] = true }
 }
-getgenv().HIPPO_KEY = ""
+
 
 repeat task.wait() until game:IsLoaded()
 repeat task.wait() until game:GetService('Players').LocalPlayer
 repeat task.wait() until not game.Players.LocalPlayer.PlayerGui:FindFirstChild('__INTRO')
 
-if not CFG['Debuggers'] or (CFG['Debuggers'] and CFG['Debuggers']['KeepCoreGUI'] == false) then for _, v in pairs(game:GetService('CoreGui'):GetDescendants()) do pcall(function() v:Destroy() end) end end
 
 local Active = workspace.__THINGS.__INSTANCE_CONTAINER.Active
 local ReplicatedStorage = cloneref(game.ReplicatedStorage)
@@ -145,7 +143,6 @@ Terrain.WaterWaveSize, Terrain.WaterWaveSpeed, Terrain.WaterReflectance, Terrain
 pcall(function() sethiddenproperty(workspace:FindFirstChildOfClass("Terrain"), "Decoration", false) end) pcall(function() sethiddenproperty(game:GetService("Lighting"), "Technology", 2) end)
 for _, v in pairs(Lighting:GetChildren()) do if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then pcall(function() v.Enabled = false end) end end
 
-if not CFG['Debuggers'] or (CFG['Debuggers'] and CFG['Debuggers']['KeepCoreGUI'] == false) then table.insert(DestroyClass, 'TextLabel') end
 
 if CFG['Stuff']['Optimizer'] then
     CurrentTask = 'Player Optimazations' task.wait(3)
