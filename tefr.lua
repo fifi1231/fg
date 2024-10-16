@@ -1,5 +1,5 @@
 getgenv().CFG = {
-    ['Stuff'] = { ['Stat Gui'] = true, ['Optimizer'] = true, ['Daycare'] = true }
+    ['Stuff'] = { ['Stat Gui'] = true, ['Optimizer'] = true }
 }
 
 
